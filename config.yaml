@@ -18,10 +18,10 @@ carpentry: 'incubator'
 # carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
-title: 'Supercomputing: Beyond the Basics' # FIXME
+title: 'Supercomputing: Beyond the Basics'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ 2026-11-03
+created: '2026-11-03'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, HPC, performance'
@@ -31,17 +31,17 @@ keywords: 'software, HPC, performance'
 # possible values: pre-alpha, alpha, beta, stable, retired
 life_cycle: 'alpha'
 
-# License of the lesson
+# License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/josemunozc/supercomputing-beyond-the-basics' # FIXME
+source: 'https://github.com/josemunozc/supercomputing-beyond-the-basics'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'arcca@cardiff.ac.uk' # FIXME
+contact: 'arcca@cardiff.ac.uk'
 
 # Navigation ------------------------------------------------
 #
@@ -68,6 +68,17 @@ contact: 'arcca@cardiff.ac.uk' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- connecting-to-falcon-ssh-keys.Rmd
+- finding-software.Rmd
+- estimating-resources.Rmd
+- protecting-your-data.Rmd
+- scaling.Rmd
+- efficiency.Rmd
+- interactive-sessions.Rmd
+- profiling.Rmd
+- improving-the-code.Rmd
+- array-jobs-and-parallel.Rmd
+- using-gpus.Rmd
 
 # Information for Learners
 learners: 
