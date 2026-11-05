@@ -1,51 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/citation.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/array-jobs-and-parallel.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/citation.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/connecting-to-falcon-ssh-keys.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/efficiency.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/citation.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/estimating-resources.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/finding-software.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/introduction.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/improving-the-code.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/reference.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/introduction.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/reference.html</loc>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/array-jobs-and-parallel.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/connecting-to-falcon-ssh-keys.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/efficiency.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/estimating-resources.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/finding-software.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/images.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/improving-the-code.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/interactive-sessions.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/profiling.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/protecting-your-data.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/scaling.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor/using-gpus.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/interactive-sessions.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/profiling.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/protecting-your-data.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/scaling.html</loc>
+  </url>
+  <url>
+    <loc>https://josemunozc.github.io/supercomputing-beyond-the-basics/using-gpus.html</loc>
   </url>
 </urlset>
