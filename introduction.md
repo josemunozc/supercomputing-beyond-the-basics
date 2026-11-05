@@ -1,77 +1,128 @@
 ---
-title: "Using Markdown"
+title: "Introduction"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What's the problem we are trying to solve?
+- Is it suitable for a supercomputer?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Run a simple Python script locally and measure runtimes.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+For this lesson we will role play as a student developing two small functions
+to implement some well known statistical techniques on relatively large
+matrices:
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+ - Principal Component Analysis, a dimensionality-reduction technique,
+   useful for summarising many measurements into fewer underlying "factors".
+ - Mean pairwise distance calculation, taking the first m rows and computing
+   the average Euclidean distance between every pair of rows
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
+<!--
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 Inline instructor notes can help inform instructors of timing challenges
 associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
+-->
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 1: Can you do it?
+## Challenge 1: Run the program.
 
-What is the output of this command?
+What is the output of this command? How long it takes?
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```shell
+$ python sweep.py 42
 ```
+Try it a few times with different seed numbers.
 
 :::::::::::::::::::::::: solution 
 
 ## Output
  
 ```output
-[1] "This new lesson looks good"
+(42, 0.004810541356349191, 109.50135188527557, 23.97225150000304)
 ```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
+The last element in the array provides the program runtime.
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 2: What Numpy version do we have?
+
+:::::::::::::::::::::::: solution 
+
+```python
+>>> import numpy as np
+>>> np.__version__
+'1.24.3'
+```
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+## The code
+This is the base code we will be using in this course. You can copy it from here or donwload it
+with th [data zip file](https://example.com/FIXME).
+
+~~~ {#sweep.py .python}
+# sweep.py
+import sys, time
+import numpy as np
+
+# Creates a relatively large matrix of random numbers (drawn from a standard normal distribution).
+# Uses a seed (passed in from the command line) so the data is reproducible —
+# same seed → same numbers every time.
+# This is essential for science: results must be verifiable.
+def make_data(seed, n=12000, p=6000):
+    return np.random.default_rng(seed).standard_normal((n, p))
+
+# Principal Component Analysis, a dimensionality-reduction technique;
+# useful for summarising many measurements into fewer underlying "factors"
+# The function below uses BLAS/LAPACK heavily: threaded and sensitive to CPU kernels
+def pca_variance(X, k=10):
+    # Centre the data (subtract each column's mean).
+    Xc = X - X.mean(axis=0)
+    # Build the covariance matrix
+    cov = Xc.T @ Xc / (len(Xc) - 1)
+    # compute eigenvalues
+    w = np.linalg.eigvalsh(cov)[::-1]
+    #Return the fraction of total variance explained by the top 10 components
+    return w[:k].sum() / w.sum()
+
+# Compute mean pairwise distance
+# Takes the first m rows and computes the average Euclidean distance between every pair of rows
+# deliberately naive loop: single-threaded, vectorise it later
+def mean_pair_distance(X, m=800):
+    total = 0.0
+    for i in range(m):
+        for j in range(i + 1, m):
+            total += np.sqrt(((X[i] - X[j]) ** 2).sum())
+    return total / (m * (m - 1) / 2)
+
+if __name__ == "__main__":
+    seed = int(sys.argv[1])
+    t0 = time.perf_counter()
+    X = make_data(seed)
+    out = (seed, pca_variance(X), mean_pair_distance(X), time.perf_counter() - t0)
+    np.savetxt(f"result_{seed}.csv", [out], delimiter=",")
+    print(out)
+~~~
+
+<!--
 ## Figures
 
 You can use standard markdown for static figures with the following syntax:
@@ -102,13 +153,14 @@ dynamic reports with {knitr}, so we now use mathjax to describe this:
 
 Cool, right?
 
+-->
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- A relatively simple program can become a challenge when we need to *scale up*.
+- For example, when we need to handle bigger datasets in disk or memory.
+- Or we need to work with more complex models that require more compute power (*High Performance Computing or HPC*).
+- Or when we need to run the program many many times (*High Throughtput Computing or HTC*).
+- Or all of the above...
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
 [r-markdown]: https://rmarkdown.rstudio.com/
